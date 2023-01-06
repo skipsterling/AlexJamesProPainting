@@ -26,18 +26,21 @@ nav {
 
 .left {
     background-color: black;
+    padding: 10rem;
     color: white;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .right {
-    background-color: transparent;
+    background-color: black;
     color: white;
     width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
