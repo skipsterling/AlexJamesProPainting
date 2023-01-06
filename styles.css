@@ -87,6 +87,27 @@ video:hover {
     transition: all 0.5s ease;
 }
 
+.s3 {
+    background-color: black;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contactme {
+    width: 100%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
 @media screen and (max-width: 900px) {
     .s1 {
       display: flex;
