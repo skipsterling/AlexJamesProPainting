@@ -1,9 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Noto Serif', serif;
     font-family: 'Oswald', sans-serif;
     font-family: 'Quattrocento', serif;
 }
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff8106;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.navbar-links {
+    height: 100%;
+    font-family: 'Oswald', sans-serif;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #F26D0A ;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
 
 h1 {
     font-family: 'Oswald', sans-serif;
@@ -20,19 +86,10 @@ a{
    color: #fff;
 }
 
-nav {
-    display: flex;
-    background-color: #ff8106;
-    color: white;
-    width: 100%;
-    height: 2rem;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'Oswald', sans-serif;
-
+li {
+    list-style: none;
 }
+
 
 .s1 {
     padding: 1rem;
@@ -108,7 +165,38 @@ video:hover {
     text-align: center;
 }
 
-@media screen and (max-width: 900px) {
+@media(max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
     .s1 {
       display: flex;
       flex-direction: column;
@@ -120,8 +208,6 @@ video:hover {
     .left{
         padding: 0rem;
     }
-
-
 
     h1 {
         font-size: 2rem;
